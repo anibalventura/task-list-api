@@ -1,6 +1,6 @@
 # To-do Item API
 
-[![ASP.NET](https://img.shields.io/static/v1?label=ASP.NET&message=5.0&color=purple)](https://dotnet.microsoft.com/apps/aspnet)
+[![ASP.NET Core](https://img.shields.io/static/v1?label=ASP.NET%20Core&message=5.0&color=purple)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE)
 
 ## Overview
@@ -14,8 +14,16 @@
 | `DELETE /api/TodoItems/{id}`  | Delete an to-do item  | None  | None |
 
 ## Build
+* Visual Studio: Open `Program.cs` and build/run.
+* Visual Studio Code: Open `Program.cs` and press F5 to build/run.
 
+Or run in terminal `dotnet build && dotnet run`
 
+## Swagger Enabled
+
+To explore and test the available APIs simply run the project and use the Swagger UI.
+
+`https://localhost:<port>/swagger/index.html`
 
 ## License
 
