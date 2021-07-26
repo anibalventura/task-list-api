@@ -1,4 +1,4 @@
-# To-do Item API
+# To-do Items REST API
 
 [![ASP.NET Core](https://img.shields.io/static/v1?label=ASP.NET%20Core&message=5.0&color=purple)](https://dotnet.microsoft.com/apps/aspnet)
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue)](LICENCE)
