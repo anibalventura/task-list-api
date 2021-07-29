@@ -1,6 +1,6 @@
-namespace TodoItemAPI.Models
+namespace TaskListAPI.Models
 {
-  public class TodoItem
+  public class Task
   {
     public long Id { get; set; }
     public string Name { get; set; }

@@ -1,30 +1,30 @@
-using TodoItemAPI.Models;
+using TaskListAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TodoItemAPI.Services
+namespace TaskListAPI.Services
 {
-  public static class TodoItemService
+  public static class TaskService
   {
-    static List<TodoItem> TodoItems { get; }
+    static List<Task> Task { get; }
     static int nextId = 3;
-    static TodoItemService()
+    static TaskService()
     {
-      TodoItems = new List<TodoItem>
+      Task = new List<Task>
             {
-                new TodoItem { Id = 1, Name = "Complete me", IsComplete = false },
-                new TodoItem { Id = 2, Name = "Swipe me", IsComplete = true }
+                new Task { Id = 1, Name = "Complete me", IsComplete = false },
+                new Task { Id = 2, Name = "Swipe me", IsComplete = true }
             };
     }
 
-    public static List<TodoItem> GetAll() => TodoItems;
+    public static List<Task> GetAll() => Task;
 
-    public static TodoItem Get(int id) => TodoItems.FirstOrDefault(p => p.Id == id);
+    public static Task Get(int id) => Task.FirstOrDefault(p => p.Id == id);
 
-    public static void Add(TodoItem TodoItem)
+    public static void Add(Task TodoItem)
     {
       TodoItem.Id = nextId++;
-      TodoItems.Add(TodoItem);
+      Task.Add(TodoItem);
     }
 
     public static void Delete(int id)
@@ -33,16 +33,16 @@ namespace TodoItemAPI.Services
       if (TodoItem is null)
         return;
 
-      TodoItems.Remove(TodoItem);
+      Task.Remove(TodoItem);
     }
 
-    public static void Update(TodoItem TodoItem)
+    public static void Update(Task TodoItem)
     {
-      var index = TodoItems.FindIndex(p => p.Id == TodoItem.Id);
+      var index = Task.FindIndex(p => p.Id == TodoItem.Id);
       if (index == -1)
         return;
 
-      TodoItems[index] = TodoItem;
+      Task[index] = TodoItem;
     }
   }
 }
